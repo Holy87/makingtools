@@ -6,6 +6,12 @@
  * Time: 23:22
  * Thanks to http://requiremind.com/a-most-simple-php-mvc-beginners-tutorial/
  */
+
+ /**
+ * Calls the proper controller and executing the selected action
+ * @param string $controller
+ * @param string $action
+ **/
   function call($controller = 'pages', $action = 'home') {
       // require the file that matches the controller name
       require_once('application/controllers/' . $controller . '_controller.php');
@@ -21,12 +27,10 @@
       $controller->{ $action }();
   }
 
-  // just a list of the controllers we have and their actions
-  // we consider those "allowed" values
+  // allowed controllers
   $controllers = array('pages' => ['home', 'error']);
 
   // check that the requested controller and action are both allowed
-  // if someone tries to access something else he will be redirected to the error action of the pages controller
   if (array_key_exists($controller, $controllers)) {
       if (in_array($action, $controllers[$controller])) {
           call($controller, $action);
