@@ -5,9 +5,11 @@
  * Date: 21/03/2017
  * Time: 21:11
  */
-include_once 'config.php';
-include_once 'application/controllers/controller.php';
-include_once 'application/db_connection.php';
+session_start();
+
+require_once 'config.php';
+require_once 'application/controllers/controller.php';
+require_once 'application/db_connection.php';
 
 if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = $_GET['controller'];

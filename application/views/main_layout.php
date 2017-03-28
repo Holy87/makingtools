@@ -30,8 +30,8 @@
             </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" placeholder="Search" type="text">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" placeholder=<?php echo '"'._('add a search').'"'; ?> type="text">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php echo _('search'); ?></button>
         </form>
     </div>
 </nav>
@@ -42,8 +42,8 @@
 <div class="container">
     <hr class="featurette-divider">
     <footer>
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>© 2017 Holy87 · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p class="float-right"><a href="#"><?php echo _('back to top'); ?></a></p>
+        <p>© 2017 Holy87 · <a href="#">Privacy</a> · <a href="#"><?php echo _('terms'); ?></a></p>
     </footer>
 
 </div><!-- /.container -->
