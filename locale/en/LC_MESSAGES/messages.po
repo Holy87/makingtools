@@ -14,5 +14,8 @@ msgstr “”
 “Content-Type: text/plain; charset=CHARSET\n”
 “Content-Transfer-Encoding: 8bit\n”
 #: gettext_example.php:21
-msgid “Titolo della finestra”
+
+
+msgid “”
 msgstr “” 
+
