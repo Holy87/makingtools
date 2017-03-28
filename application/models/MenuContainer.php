@@ -7,7 +7,7 @@ class MenuContainer
         $this->menu_elements = $menu_elements;
     }
 
-    public function get_elements() {
+    public static function get_elements() {
         $new_ary = [];
         foreach($this->menu_elements as $element) {
             if ($element->get_access() <= $_SESSION['user_access'])
