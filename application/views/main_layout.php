@@ -1,6 +1,11 @@
+<?php
+require_once ABS_PATH.'/application/views/MainView.php';
+require_once ABS_PATH.'/application/models/User.php';
+$user = User::get_user();
+?>
 <!DOCTYPE html>
 <head>
-    <title></title>
+    <title><?php MainView::page_title(); ?></title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="author" content="Holy87">
@@ -12,25 +17,13 @@
 
 <body>
 <!-- Fixed navbar -->
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">Carousel</a>
-    <?php require_once 'menu.php'; ?>
-</nav>
+<?php require_once  ABS_PATH.'/application/views/templates/navbar.php'; ?>
 
-<?php require_once  'application/routes.php'; ?>
+<!-- MAIN DYNAMIC CONTNET -->
+<?php require_once  ABS_PATH.'/application/routes.php'; ?>
 
 <!-- FOOTER -->
-<div class="container">
-    <hr class="featurette-divider">
-    <footer>
-        <p class="float-right"><a href="#"><?php echo _('back to top'); ?></a></p>
-        <p>© 2017 Holy87 · <a href="#">Privacy</a> · <a href="#"><?php echo _('terms'); ?></a></p>
-    </footer>
-
-</div><!-- /.container -->
+<?php require_once  ABS_PATH.'/application/views/templates/footer.php'; ?>
 
 
 <!-- Bootstrap core JavaScript
@@ -39,8 +32,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="assets/scripts/holder.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/scripts/ie10-viewport-bug-workaround.js"></script>
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>

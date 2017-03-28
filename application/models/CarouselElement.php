@@ -12,7 +12,13 @@ class CarouselElement
     private $url;
     private $title;
     private $description;
-    private $active;
+    public $active;
+    private $button;
+
+    public function  getButton()
+    {
+        return $this->button;
+    }
 
     /**
      * @return string
@@ -46,12 +52,22 @@ class CarouselElement
         return $this->description;
     }
 
-     public function __construct($title, $text, $link, $image, $active) {
+    /**
+     * CarouselElement constructor.
+     * @param string $title
+     * @param string $text
+     * @param string $link
+     * @param string $image
+     * @param boolean $active
+     * @param string $button
+     */
+    public function __construct($title, $text, $link, $image, $active, $button) {
         $this->title = $title;
         $this->description = $text;
         $this->image_url = $image;
         $this->url = $link;
         $this->active = $active;
+        $this->button = $button;
     }
 
     /**

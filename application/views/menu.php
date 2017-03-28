@@ -1,12 +1,14 @@
 <?php
-require_once 'application/models/MenuElement.php';
-require_once 'application/models/MenuContainer.php';
+require_once ABS_PATH.'/application/models/MenuElement.php';
+require_once ABS_PATH.'/application/models/MenuContainer.php';
 
 function draw_menu_elements() {
+
     $html = '';
-    if (!isset ($_SESSION['user']))
-        return;
-    foreach(MenuContainer::get_elements() as $menu_element)
+    global $action;
+    $menu_elements = new MenuContainer();
+    /** @var MenuElement $menu_element */
+    foreach($menu_elements->get_elements() as $menu_element)
     {
         if ($action == $menu_element->get_tag())
             $active = ' active';
