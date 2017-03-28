@@ -38,10 +38,15 @@ class User
     /**
      * @return User
      */
-    public static function get_user() {
+    public static function get_user($id) {
         if(isset($_SESSION['user_id'])) {
-            return null;
-            //TODO: Obtain the user
+            $link = Db::getInstance();
+            $query = "SELECT * FROM users WHERE user_id = :id";
+            $stmt = $link->prepare($query);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            return new User($user['user_id'], $user['user_name'], $user['user_mail'], $user['user_active'], $user['user_avatar'], $user['user_access']);
         } else {
             return new User(0,'', '', 0, '', 0);
         }
