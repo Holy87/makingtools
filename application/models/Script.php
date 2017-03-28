@@ -6,7 +6,6 @@
  * Date: 21/03/2017
  * Time: 21:13
  */
-include_once 'Model.php';
 
 class Script
 {
@@ -18,9 +17,18 @@ class Script
     public $last_update;
     public $author_id;
 
-    public function author()
+    /**
+     * @return User
+     */
+    public function getAuthor()
     {
-
+        $link = Db::getInstance();
+        $query = "SELECT * FROM users WHERE user_id = :id";
+        $stmt = $link->prepare($query);
+        $stmt->bindParam(':id', $this->author_id);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return new User($user['user_id'], $user['user_name'], $user['user_mail'], $user['user_active'], $user['user_avatar'], $user['user_access']);
     }
 
     /**
