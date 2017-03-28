@@ -10,4 +10,18 @@ class Controller
     function invoke() {
 
     }
+    /**
+     * Aggiunge qualcosa
+     * @return number 
+     */
+    function test() {
+        return 5;
+    }
+    /**
+     * Stampa testo
+     * @param String $ttesto
+     */
+    function prova($ttesto) {
+        echo $ttesto;
+    }
 }

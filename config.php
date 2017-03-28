@@ -11,7 +11,7 @@
 // Database host
 define('DB_HOST', 'localhost');
 // Database name
-define('DB_NAME', 'rm_tools');
+define('DB_NAME', 'test');
 // User login
 define('DB_USER', 'root');
 // User password
