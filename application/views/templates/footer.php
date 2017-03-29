@@ -1,9 +1,3 @@
-/**
- * Created by PhpStorm.
- * User: Francesco
- * Date: 28/03/2017
- * Time: 15:53
- */
 <div class="container">
     <hr class="featurette-divider">
     <footer>
