@@ -3,5 +3,5 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">Carousel</a>
-    <?php require_once ABS_PATH.'/application/views/menu.php'; ?>
+    <?php require_once ABS_PATH . '/application/views/templates/menu.php'; ?>
 </nav>

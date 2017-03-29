@@ -1,6 +1,6 @@
 <?php
-require_once ABS_PATH.'/application/models/MenuElement.php';
-require_once ABS_PATH.'/application/models/MenuContainer.php';
+require_once ABS_PATH . '/application/models/MenuElement.php';
+require_once ABS_PATH . '/application/models/MenuContainer.php';
 
 function draw_menu_elements() {
 
